@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 3000;
 
 //Routes API's
 app.use(express.json());
+app.get('/', funvtion(res,req)(
+    res.status(200).json({message: 'Welcome to numba9 todo api'})
+));
 app.get('/todos', todoController.getAllTodo);
 app.post('/todos', todoController.addTodo);
 app.patch('/todos/:todoId',todoController.updateTodoById);
